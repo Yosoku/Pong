@@ -11,4 +11,4 @@ Graphical User Interface and it is controlled by the Arrow keys.
 * Recalculating Paddle's speed
 
 
- ![](res/pong.png)
+ ![](./res/pong.png)
