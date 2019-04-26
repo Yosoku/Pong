@@ -11,4 +11,4 @@ Graphical User Interface and it is controlled by the Arrow keys.
 * Recalculating Paddle's speed
 
 
- ![Alt](/res/pong.png "Title")
+ ![Alt](D:\Code\Java\Pong\res\pong.png "Title")
