@@ -5,6 +5,6 @@ Graphical User Interface and it is controlled by the Arrow keys.
 
 
 # Future Updates include
- *Adding audio
- *Making the graphics more 1975
- *Option to mouse control
+*Adding audio
+*Making the graphics more 1975
+*Option to mouse control
