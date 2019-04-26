@@ -9,3 +9,6 @@ Graphical User Interface and it is controlled by the Arrow keys.
 * Making the graphics more 1975
 * Option to mouse control
 * Recalculating Paddle's speed
+
+
+ ![Alt](/res/pong.png "Title")
