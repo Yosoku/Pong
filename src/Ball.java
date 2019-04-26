@@ -1,3 +1,4 @@
+
 import java.util.Random;
 import java.awt.Graphics;
 import java.awt.Color;
@@ -7,7 +8,8 @@ class Ball {
   private int yPos;
   private int xSpeed;
   private int ySpeed;
-  private static final int SPEED = 10;
+  private int radius = 10;
+  private static final int SPEED = 5;
 
 
 
@@ -28,22 +30,31 @@ class Ball {
     this.yPos = Pong.HEIGHT/2;
     start();
   }
+  // 0 <= x <= 1 < 2=bound
   public void start(){
-    Random r = new Random();
-    this.xSpeed = r.nextInt(this.SPEED);
-    this.ySpeed = r.nextInt(this.SPEED);
-  }
+   Random r = new Random();
+   int rand = r.nextInt(3)-1;
+   int rand2  = r.nextInt(3)-1;
+   while(rand==0 || rand2==0)
+      {
+        rand2 = r.nextInt(3)-1;
+        rand = r.nextInt(3)-1;
+      }
+  this.xSpeed = rand*SPEED;
+   this.ySpeed = rand2*SPEED;
+ }
+
   public void update(){
     if(this.yPos < 0 || this.yPos + 20 > Pong.HEIGHT)
       this.ySpeed *=-1;
     if(this.xPos > Pong.WIDTH)
       this.xSpeed*=-1;
     move();
-
   }
 
   public void reverseXspeed(){
-    this.xSpeed*=-1;
+
+    this.xSpeed = -this.xSpeed;
   }
   private void move(){
     this.xPos +=this.xSpeed;
@@ -52,11 +63,7 @@ class Ball {
 
   public void render(Graphics g){
     g.setColor(Color.WHITE);
-    g.fillOval(this.xPos, this.yPos, 20, 20);
+    g.fillOval(this.xPos - this.radius/2, this.yPos-radius/2, this.radius*2, this.radius*2);
   }
-
-
-
-
 
 }
